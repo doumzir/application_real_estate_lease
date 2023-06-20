@@ -3,7 +3,11 @@
   width: 100%;
   max-width: 1240px;
   display: grid;
+height: 829px;
+  overflow-y: scroll;
 
+  -ms-overflow-style: none;  /* IE et Edge */
+  scrollbar-width: none;  /* Firefox */
   grid-template-columns: repeat(3, 1fr);
 
   grid-gap: 60px;
@@ -11,4 +15,11 @@
   margin: auto;
   background-color: #F7F7F7;
   border-radius: 25px;
+}
+
+/* scrollbar Chrome, safari + Opera
+
+ */
+.gallery::-webkit-scrollbar {
+  display: none;
 }

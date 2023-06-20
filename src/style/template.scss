@@ -1,0 +1,19 @@
+nav{
+  width: 100%;
+  max-width: 1240px;
+  height: 68px;
+  margin: 45px auto 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul a{
+    font-size: 24px;
+    color: #FF6060;
+    text-decoration: none;
+  }
+  ul a:first-child{
+    margin: 0 57px;
+  }
+
+}

@@ -1,9 +1,10 @@
 import {Outlet} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useParams} from "react-router-dom";
-
+let underline
 function Survey() {
   const {questionNumber} = useParams()
+  underline = 2
   return (
     <div>
       <h1>Questionnaire 🧮</h1>
