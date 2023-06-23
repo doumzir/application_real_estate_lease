@@ -1,10 +1,10 @@
 import '../../style/banner.scss';
-import background from'../../image/montain.jpg'
-function Banner({title}){
+
+function Banner({title, img}){
   console.log(title)
   return(
     <div  className='banner' style={{
-      backgroundImage: `url(${background})`,
+      backgroundImage: `url(${img})`,
     backgroundRepeat:"no-repeat",
     backgroundSize:"cover",
       backgroundPositionY:"50%"

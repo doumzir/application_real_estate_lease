@@ -1,0 +1,35 @@
+.collapse {
+
+  width: 100%;
+  max-width: 1023px;
+  margin: 15px auto;
+
+  border-radius: 15px;
+  overflow: hidden;
+  min-height: 100%;
+
+  h2 {
+    padding: 10px 20px 10px 10px;
+    background-color: #FF6060;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+
+  p {
+    padding: 25px 28px 20px 20px;
+    color: #FF6060;
+    background-color: #F7F7F7;
+    display: none;
+  }
+}
+
+.active {
+  p {
+    display: block;
+  }
+
+  img {
+    transform: rotate(180deg);
+  }
+}

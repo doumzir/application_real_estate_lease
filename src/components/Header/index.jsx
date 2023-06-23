@@ -4,6 +4,7 @@ import Logo from "../../image/LogoKasa.svg"
 function Header({id}) {
 console.log(id + " id");
   return (
+    <header>
     <nav>
       <Link to="/"><img src={Logo} alt="Notre Logo Kasa" /></Link>
       <ul>
@@ -11,7 +12,7 @@ console.log(id + " id");
       <Link to="/" id={id} >Accueil </Link>
       <Link to="/about" id="AboutLink" >A Propos</Link>
       </ul>
-    </nav>
+    </nav></header>
   )
 }
 
