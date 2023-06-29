@@ -1,12 +1,16 @@
 .collapse {
 
   width: 100%;
+
   max-width: 1023px;
-  margin: 15px auto;
+  margin: 0px auto 30px auto;
 
   border-radius: 15px;
   overflow: hidden;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
 
   h2 {
     padding: 10px 20px 10px 10px;
@@ -14,22 +18,114 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    line-height: 32px;
+
+
+
   }
 
   p {
+
+
+position: relative;
+    z-index: -20;
+    position: -100px;
+    height: 0;
     padding: 25px 28px 20px 20px;
     color: #FF6060;
     background-color: #F7F7F7;
-    display: none;
+
+
   }
 }
+.hidden{
+  p{
 
+
+
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  animation-name:desactiveAnimation ;}
+  img {
+
+
+    animation-name: desactiveAnimationImg;
+
+
+    animation-duration: 0.5s;
+
+    animation-fill-mode: forwards;
+  }
+
+}
 .active {
+
   p {
-    display: block;
+display: inline-block;
+    animation-name: activeAnimation;
+
+
+    animation-duration: 0.5s;
+
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
   }
 
   img {
     transform: rotate(180deg);
+    animation-name: activeAnimationImg;
+
+
+    animation-duration: 0.5s;
+
+    animation-fill-mode: forwards;
   }
+}
+
+@keyframes activeAnimation {
+  from{
+top: -100px;
+    height: 0;
+  padding: 0 28px 0 20px;}
+  to{
+top: 0;
+    height: fit-content;
+
+  }
+
+}
+
+@keyframes activeAnimationImg {
+  from{transform: rotate(0deg);
+
+  }
+  to{
+    transform: rotate(180deg);
+  }
+
+}
+@keyframes desactiveAnimation{
+  from{
+top: 0px;
+    height:fit-content ;
+
+  }
+  to{
+top: -100px;
+    height: 0;
+    padding: 0 28px 0 20px;;
+
+  }
+}
+@keyframes desactiveAnimationImg {
+  from {
+    transform: rotate(180deg);
+
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.collapse:hover{
+  cursor: pointer;
 }

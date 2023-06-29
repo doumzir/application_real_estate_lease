@@ -1,36 +1,27 @@
 import Header from "./Header";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+
 import Home from "../pages/Home";
-import Survey from "../pages/Survey/Survey";
-import ClientForm from "./ClientForm";
-import FreelanceForm from "./FreelanceForm";
+import Housing from "../pages/Housing";
 import Error from "./Error";
-import React from "react";
+import React, {useState} from "react";
 import Footer from "./Footer/Footer";
 import About from "../pages/About";
-let underline
-let idUlLink
-function MyRoutes(){
-  if (underline = 1 ){
+function MyRoutes() {
 
-     idUlLink ="HomeLink"
-  } else{
-    idUlLink = ""
-  }
-  return(
-<Router>
-  <Header  id={idUlLink} />
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/about" element={<About />}>
-      { /* Nous imbriquons nos composants dans survey */}
-      <Route path="client" element={<ClientForm />} />
-      <Route path="freelance" element={<FreelanceForm />} />
+  return (
+    <Router>
+      <Header/>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route path="house/:id" element={<Housing/>}/>
+        <Route exact path="/about" element={<About/>}/>
 
-    </Route>
-    <Route path="*" element={<Error />} />
-  </Routes>
-  <Footer />
-</Router>)
-}
+       <Route path="*" element={<Error/>}/>
+      </Routes>
+
+      <Footer/>
+    </Router>)
+};
+
 export default MyRoutes

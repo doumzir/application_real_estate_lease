@@ -1,19 +1,19 @@
 
 
-import  { useState} from "react";
+import  { useEffect, useState} from "react";
 
 import '../../style/Collapse.scss'
 import arrowIcon from '../../image/icon/arrow.svg'
 
 function Collapse({id, title, content}) {
-const [isOpen, setIsOpen] = useState(true)
+const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div className={isOpen? "collapse" : " collapse active"} id={id} onClick={() => setIsOpen(!isOpen)}>
+    <div className={isOpen? "collapse hidden" : " collapse active"} id={id} onClick={() => setIsOpen(!isOpen)}>
 
       <h2>{title} <img src={arrowIcon}></img></h2>
 
-      <p>{content}</p>
+      <p >{content}</p>
 
     </div>
   )

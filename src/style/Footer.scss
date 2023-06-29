@@ -1,7 +1,8 @@
 footer
 {
-
-  height:200px;
+position: absolute;
+  bottom: 0;
+  height:209px;
   width: 100%;
 
   background-color: black;
@@ -15,11 +16,11 @@ footer
     color: white;
     margin: auto;
     text-align: center;
+    font-size: 24px;
 
   }
   img{
-    margin: auto;
-    margin-bottom: 49px;
+    margin: auto auto 49px;
     width: 122px;
   }
 }
