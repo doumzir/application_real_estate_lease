@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import defaultCard from "../../defaultCard.json"
 import React, {FunctionComponent, useState} from "react";
 import Error from "../../components/Error"
+import Collapse from "../../components/collapse";
 
 
 function Housing() {
@@ -18,15 +19,21 @@ console.log(
   const idList = cards.map(card => {
     return (card.id)
   });
-  const idListarray = Object.values(idList)
+  console.log(cards);
+  const idListarray = Object.values(idList);
   console.log(idListarray.includes("truc"))/*
   console.log(idList.include("112"))*/
-
-  return (
-
-    <div>
-      {idListarray.includes(truc) ? (<h2>{id}</h2>) : (<Error/>)}
- </div>
+const Housedetail = cards.find(house => house.id === truc);
+  const equipmentsdetail = Housedetail.equipments.map(element =>{return(<li key={element}>{element}</li>);});
+console.log(Housedetail)
+console.log(equipmentsdetail)
+ return (
+    <main>
+      {idListarray.includes(truc) ? <section>
+        <h2>{Housedetail.title}</h2><p>{Housedetail.location}</p>
+      <Collapse  key="1" title={"Description"} content={Housedetail.description}></Collapse>
+      <Collapse  key="2" title={"Equipements"} equipment={equipmentsdetail}></Collapse> </section> : (<Error/>)}
+ </main>
   )
 }
 export default Housing

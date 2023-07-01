@@ -5,7 +5,7 @@ import  { useEffect, useState} from "react";
 import '../../style/Collapse.scss'
 import arrowIcon from '../../image/icon/arrow.svg'
 
-function Collapse({id, title, content}) {
+function Collapse({id, title, content, equipment}) {
 const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -13,7 +13,7 @@ const [isOpen, setIsOpen] = useState(true);
 
       <h2>{title} <img src={arrowIcon}></img></h2>
 
-      <p >{content}</p>
+      {content ? <p>{content}</p> : <ul>{equipment}</ul>}
 
     </div>
   )
