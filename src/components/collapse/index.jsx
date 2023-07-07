@@ -13,7 +13,7 @@ const [isOpen, setIsOpen] = useState(true);
 
       <h2>{title} <img src={arrowIcon}></img></h2>
 
-      {content ? <p>{content}</p> : <ul>{equipment}</ul>}
+      {content ? <p className="content">{content}</p> : <ul className="content">{equipment}</ul>}
 
     </div>
   )

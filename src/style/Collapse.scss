@@ -24,12 +24,12 @@
 
   }
 
-  p {
+  .content {
 
 
 position: relative;
     z-index: -20;
-    position: -100px;
+    top: -100px;
     height: 0;
     padding: 25px 28px 20px 20px;
     color: #FF6060;
@@ -39,7 +39,7 @@ position: relative;
   }
 }
 .hidden{
-  p{
+  .content{
 
 
 
@@ -60,7 +60,7 @@ position: relative;
 }
 .active {
 
-  p {
+ .content {
 display: inline-block;
     animation-name: activeAnimation;
 
@@ -84,12 +84,15 @@ display: inline-block;
 
 @keyframes activeAnimation {
   from{
-top: -100px;
-    height: 0;
-  padding: 0 28px 0 20px;}
+    height: 0px;
+    padding: 0 28px 0 20px;
+top: -200px;
+
+  }
   to{
-top: 0;
     height: fit-content;
+top: 0;
+
 
   }
 
@@ -106,14 +109,17 @@ top: 0;
 }
 @keyframes desactiveAnimation{
   from{
-top: 0px;
+
     height:fit-content ;
+    top: 0px;
 
   }
   to{
-top: -100px;
-    height: 0;
-    padding: 0 28px 0 20px;;
+
+    height: 0px;
+    padding: 0 28px 0 20px;
+    top: -200px;
+
 
   }
 }
