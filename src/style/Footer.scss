@@ -15,7 +15,7 @@ position: absolute;
 
   p{
     color: white;
-    margin: auto;
+    margin: 0 auto auto;
     text-align: center;
     font-size: 24px;
 @media screen and (max-width: 415px){
@@ -27,7 +27,7 @@ position: absolute;
     margin: auto auto 49px;
     width: 122px;
     @media screen and (max-width: 415px){
-
+      margin: auto auto 15px;
       width: 122px;
     }
   }
