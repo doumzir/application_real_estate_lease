@@ -7,10 +7,19 @@
 
   border-radius: 15px;
   overflow: hidden;
-  min-height: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 415px){
+    margin: 0px auto 20px auto;
+  }
+img{@media screen and (max-width: 415px) {
+width: 16px;
 
+}
+
+
+}
 
   h2 {
     padding: 10px 20px 10px 10px;
@@ -19,7 +28,11 @@
     justify-content: space-between;
     color: white;
     line-height: 32px;
+@media screen and (max-width: 415px) {
+  line-height: 10px;
+  font-size: 13px;
 
+}
 
 
   }
@@ -35,6 +48,11 @@ position: relative;
     color: #FF6060;
     background-color: #F7F7F7;
 
+    @media screen and (max-width: 415px) {
+      padding: 13px 20px 20px 20px;
+      font-size: 12px;
+
+    }
 
   }
 }

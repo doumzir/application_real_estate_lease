@@ -1,8 +1,11 @@
-import React from "react";
-
+import React, {useState} from "react";
+import "../../style/detail.scss"
 function Details({title, tags, location}) {
-  return (<div><h2>{title}</h2><p>{location}</p>
-    <p>{tags[0]}</p><p>{tags[1]}</p><p>{tags[2]}</p>
+  let [tagsItem] = useState(tags);
+  const tagList = tagsItem.map((tag, index) => { return(<li key={index} id={index} >{tag}</li>);});
+  return (<div id="Detail"><h2>{title}</h2><p>{location}</p>
+    <ul id="tagList">
+    {tagList}</ul>
   </div>)
 }
 

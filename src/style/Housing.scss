@@ -1,0 +1,44 @@
+.HousingDetail{
+
+  width: 90%;
+  max-width: 1240px;
+  margin: 50px auto;
+display: flex;
+flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 415px) {
+    margin: 27px auto;
+  }
+  #PersonalDetail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
+    margin-bottom: 31px;
+    @media screen and (max-width: 415px) {
+      flex-direction: row-reverse;
+      align-items: center;
+    width: 100%;
+      margin-bottom: 13px;
+    }
+  }
+  #Detail{
+    margin-bottom: 24px;
+    @media screen and (max-width: 415px) {
+      margin-bottom:16px ;
+
+    }
+  }
+#CallapseHouse{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .collapse{
+    width: 47%;
+    margin:0;
+
+  }
+}
+}

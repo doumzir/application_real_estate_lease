@@ -1,29 +1,70 @@
 
 header {
   margin: 40px auto auto;
-  width: 100%;
+  width: 90%;
   max-width: 1240px;
   height: 68px;
   position: relative;
   top: 0;
   left: 0;
+  @media screen and (max-width: 415px) {
+    margin: 20px 20px 0;
+  }
+
+  img{
+    width: 100%;
+    min-width: 145px;
+    max-width: 210px;
+    @media screen and (max-width: 500px) {
+     width: 80%;
+    }
+    @media screen and (max-width: 415px) {
+      width: 145px;
+    }
+
+  }
   nav {
-height: 68px;
+    height: 68px;
 
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    ul {
+      width: 100%;
+      max-width: 250px;
+      display: flex;
+      justify-content: space-between;
+
+      @media screen and (max-width: 900px) {
+        max-width: 190px;
+      }
+      @media screen and (max-width: 415px){
+        width: 117px;
+
+      }
+    }
+
+    .active {
+      border-bottom: 2px solid #FF6060;;
+    }
+
     ul a {
+      display: inline-block;
+      width: fit-content;
       font-size: 24px;
       color: #FF6060;
       text-decoration: none;
-    }
+      @media screen and (max-width: 900px) {
+        font-size: 17px;
+      }
+      @media screen and (max-width: 415px){
+        font-size: 12px;
 
-    ul a:first-child {
-      margin: 0 57px;
+      }
     }
-
   }
-}
+
+ }
+

@@ -12,15 +12,24 @@ position: absolute;
   flex-direction: column;
   justify-content: center;
   padding: 66px 0 29px 0;
+
   p{
     color: white;
     margin: auto;
     text-align: center;
     font-size: 24px;
-
+@media screen and (max-width: 415px){
+  font-size: 12px;
+  width: 105px;
+}
   }
   img{
     margin: auto auto 49px;
     width: 122px;
+    @media screen and (max-width: 415px){
+
+      width: 122px;
+    }
   }
+
 }

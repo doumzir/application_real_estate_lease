@@ -8,6 +8,7 @@ import arrowIcon from '../../image/icon/arrow.svg'
 function Collapse({id, title, content, equipment}) {
 const [isOpen, setIsOpen] = useState(true);
 
+
   return (
     <div className={isOpen? "collapse hidden" : " collapse active"} id={id} onClick={() => setIsOpen(!isOpen)}>
 

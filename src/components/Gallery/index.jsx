@@ -10,7 +10,7 @@ import defaultCard from "../../defaultCard.json"
 function Gallery() {
   let [cards] = useState(defaultCard);
   const CardList = cards.map(card => {
-    return (<Link to={`/house/${card.id}`} > <Card key={card.id} id={card.id} title={card.title} cover={card.cover}/></Link>);
+    return (<Card key={card.id} id={card.id} title={card.title} cover={card.cover}/>);
   });
   return (
     <div className='gallery'>

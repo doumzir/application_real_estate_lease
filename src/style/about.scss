@@ -1,12 +1,17 @@
 #about{
   padding-bottom: 8px;
   padding-top: 38px;
-
+width: 90%;
+  max-width: 1240px;
+  margin: auto;
+  @media screen and (max-width: 415px) {
+    width: 336px;
+  }
 }
 
 
 .preload .collapse {
-  p, img
+  p, img, ul
   {
     animation-duration: 0s !important;
     -webkit-animation-duration: 0s !important;

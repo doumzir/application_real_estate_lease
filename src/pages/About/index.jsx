@@ -33,8 +33,10 @@ function About(){
   });
   useEffect(() => {
     setTimeout(function(){
-      document.getElementById("about").className="";
-    },500);
+      const about = document.getElementById("about");
+      if (about) {
+        about.className = "";}
+    },750);
   }, [])
 
 

@@ -1,0 +1,16 @@
+#Rating{
+height: 36px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 415px) {
+    height: 18px ;
+  }
+  svg{
+    padding: 4.5px;
+    height: 24px;
+    color: #FF6060;
+    @media screen and (max-width: 415px) {
+      height: 13px;
+    }
+  }
+}
