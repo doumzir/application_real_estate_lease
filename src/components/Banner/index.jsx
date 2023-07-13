@@ -1,7 +1,7 @@
 import '../../style/banner.scss';
 
 function Banner({title, img}){
-  console.log(title)
+
   return(
     <div  className='banner' style={{
       backgroundImage: `url(${img})`,
