@@ -6,11 +6,11 @@ import "../../style/Rating.scss"
 function Rating({rate}){
 return(
   <div id='Rating'>
-    { rate >= 1 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon icon={faStarRegular} />}
-    { rate >= 2 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon icon={faStarRegular} />}
-    { rate >= 3 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon icon={faStarRegular} />}
-    { rate >= 4 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon icon={faStarRegular} />}
-    { rate >= 5 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon icon={faStarRegular} />}
+    { rate >= 1 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon className="regular" icon={faStarSolid} />}
+    { rate >= 2 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon className="regular" icon={faStarSolid} />}
+    { rate >= 3 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon className="regular" icon={faStarSolid} />}
+    { rate >= 4 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon className="regular" icon={faStarSolid} />}
+    { rate >= 5 ? <FontAwesomeIcon icon={faStarSolid} />: <FontAwesomeIcon className="regular" icon={faStarSolid} />}
 
   </div>
 

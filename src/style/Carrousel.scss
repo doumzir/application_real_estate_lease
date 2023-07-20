@@ -1,6 +1,6 @@
 .Carrousel{
   width: 100%;
-
+position: relative;
 
   margin: 0 auto 24px auto;
   height: 415px;
@@ -17,6 +17,16 @@
     position: relative;
     z-index: 1;
 
+  }
+  #NumberImage{
+  font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (max-width: 415px){
+      display: none;
+    }
   }
   img{
 

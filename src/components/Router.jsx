@@ -1,6 +1,5 @@
 import Header from "./Header";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-
 import Home from "../pages/Home";
 import Housing from "../pages/Housing";
 import Error from "./Error";

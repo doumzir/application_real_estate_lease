@@ -11,15 +11,20 @@ import "../../style/Housing.scss"
 
 function Housing() {
   const {id} = useParams();
+
   let [cards] = useState(defaultCard);
   const idList = cards.map(card => {
     return (card.id)
   });
   const idListarray = Object.values(idList);
-  const Housedetail = cards.find(house => house.id === id);
-  const equipmentsdetail = Housedetail.equipments.map(element => {
-    return (<li key={element}>{element}</li>);
-  });
+  let Housedetail;
+  let equipmentsdetail;
+  if(idListarray.includes(id) ){
+    Housedetail = cards.find(house => house.id === id);
+    equipmentsdetail = Housedetail.equipments.map(element => {
+      return (<li key={element}>{element}</li>);
+  });}
+
 
   useEffect(() => {
     setTimeout(function () {

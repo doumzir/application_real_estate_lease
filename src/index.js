@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import { createRoot } from 'react-dom/client';
 import './style/index.scss';
 import MyRoutes from "./components/Router";
