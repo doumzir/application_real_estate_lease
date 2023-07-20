@@ -24,7 +24,7 @@ function Carrousel(pictures) {
       <div className='Imgdiv' id="Imgdiv" style={{left: `-${index}00%`}}>{Carrouselimg}`</div>
       {images.length > 1 ?
         <div className="arrow"><FontAwesomeIcon icon={faChevronUp} rotation={270} onClick={handlePrevious}/>
-          <p id="NumberImage">1/{length}</p>
+          <p id="NumberImage">{index+1}/{length}</p>
           <FontAwesomeIcon icon={faChevronUp} rotation={90} onClick={handleNext}/></div> : ("")}
       <p>{index}</p></div>
   );
